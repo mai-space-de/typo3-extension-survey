@@ -1,0 +1,26 @@
+<html
+    data-namespace-typo3-fluid="true"
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+<fieldset class="mai-survey-question">
+    <legend>{question.question}</legend>
+
+    <f:switch expression="{question.type}">
+        <f:case value="single">
+            <f:render partial="Survey/QuestionTypes/SingleChoice" arguments="{question: question, iterator: iterator}" />
+        </f:case>
+        <f:case value="multi">
+            <f:render partial="Survey/QuestionTypes/MultiChoice" arguments="{question: question, iterator: iterator}" />
+        </f:case>
+        <f:case value="scale">
+            <f:render partial="Survey/QuestionTypes/Scale" arguments="{question: question, iterator: iterator}" />
+        </f:case>
+        <f:case value="date">
+            <f:render partial="Survey/QuestionTypes/DateInput" arguments="{question: question, iterator: iterator}" />
+        </f:case>
+        <f:defaultCase>
+            <f:render partial="Survey/QuestionTypes/TextInput" arguments="{question: question, iterator: iterator}" />
+        </f:defaultCase>
+    </f:switch>
+</fieldset>
+</html>

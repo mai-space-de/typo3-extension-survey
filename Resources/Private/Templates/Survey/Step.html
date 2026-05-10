@@ -1,0 +1,55 @@
+<html
+    data-namespace-typo3-fluid="true"
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+<f:layout name="Default" />
+
+<f:section name="main">
+    <section
+        class="mai-survey-step"
+        data-survey-wizard="1"
+        data-current-step="{currentStep}"
+        data-total-steps="{totalSteps}"
+    >
+        <h2>{survey.title}</h2>
+
+        <f:if condition="{settings.showProgressIndicator}">
+            <f:render partial="Survey/ProgressIndicator" arguments="{currentStep: currentStep, totalSteps: totalSteps, progressPercentage: progressPercentage}" />
+        </f:if>
+
+        <f:flashMessages />
+
+        <f:form action="submit" arguments="{survey: survey}" method="post">
+            <f:for each="{questions}" as="question" iteration="iterator">
+                <div class="mai-survey-step__question" data-survey-step="{iterator.cycle}">
+                    <f:render partial="Survey/Question" arguments="{question: question, iterator: iterator}" />
+                </div>
+            </f:for>
+
+            <div class="mai-survey-step__actions">
+                <button
+                    type="button"
+                    class="mai-button mai-button--secondary"
+                    data-survey-prev="1"
+                >
+                    <f:translate key="survey.step.prev" extensionName="mai_survey" />
+                </button>
+                <button
+                    type="button"
+                    class="mai-button mai-button--secondary"
+                    data-survey-next="1"
+                >
+                    <f:translate key="survey.step.next" extensionName="mai_survey" />
+                </button>
+                <button
+                    type="submit"
+                    class="mai-button mai-button--primary"
+                    data-survey-submit="1"
+                >
+                    <f:translate key="survey.submit.label" extensionName="mai_survey" />
+                </button>
+            </div>
+        </f:form>
+    </section>
+</f:section>
+</html>

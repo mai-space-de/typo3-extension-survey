@@ -1,0 +1,14 @@
+<html
+    data-namespace-typo3-fluid="true"
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+<div class="mai-survey-question__text">
+    <textarea
+        class="mai-survey-question__input"
+        name="answers[{question.uid}]"
+        id="q{question.uid}"
+        rows="5"
+        data-survey-required="{f:if(condition: question.required, then: '1', else: '0')}"
+    ></textarea>
+</div>
+</html>

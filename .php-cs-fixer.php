@@ -1,13 +1,17 @@
 <?php
 
-$finder = PhpCsFixer\Finder::create()
-    ->in([__DIR__ . '/Classes', __DIR__ . '/Tests'])
-    ->exclude('vendor');
+declare(strict_types=1);
 
-return (new PhpCsFixer\Config())
+$finder = \PhpCsFixer\Finder::create()
+    ->in([
+        __DIR__ . '/Classes',
+        __DIR__ . '/Tests',
+    ]);
+
+return (new \PhpCsFixer\Config())
     ->setRules([
         '@PER-CS2.0' => true,
         '@PER-CS2.0:risky' => true,
     ])
-    ->setRiskyAllowed(true)
-    ->setFinder($finder);
+    ->setFinder($finder)
+    ->setRiskyAllowed(true);

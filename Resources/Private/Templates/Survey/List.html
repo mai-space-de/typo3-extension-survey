@@ -1,0 +1,37 @@
+<html
+    data-namespace-typo3-fluid="true"
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+<f:layout name="Default" />
+
+<f:section name="main">
+    <section class="mai-survey-list">
+        <h1><f:translate key="survey.list.title" extensionName="mai_survey" /></h1>
+
+        <f:flashMessages />
+
+        <f:if condition="{surveys}">
+            <f:then>
+                <div class="mai-survey-list__grid">
+                    <f:for each="{surveys}" as="survey">
+                        <article class="mai-survey-list__card">
+                            <h2 class="mai-survey-list__card-title">{survey.title}</h2>
+                            <f:if condition="{survey.description}">
+                                <p class="mai-survey-list__card-description">{survey.description}</p>
+                            </f:if>
+                            <f:link.action action="step" arguments="{survey: survey}" class="mai-button mai-button--primary">
+                                <f:translate key="survey.list.start" extensionName="mai_survey" />
+                            </f:link.action>
+                        </article>
+                    </f:for>
+                </div>
+            </f:then>
+            <f:else>
+                <p class="mai-survey-list__empty">
+                    <f:translate key="survey.list.empty" extensionName="mai_survey" />
+                </p>
+            </f:else>
+        </f:if>
+    </section>
+</f:section>
+</html>

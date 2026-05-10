@@ -1,7 +1,7 @@
 {
     "name": "maispace/mai-survey",
-    "description": "Survey and questionnaire records with question and answer management.",
     "type": "typo3-cms-extension",
+    "description": "Survey and Mitmach-Matrix extension for TYPO3",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
@@ -9,6 +9,17 @@
             "role": "Developer"
         }
     ],
+    "require": {
+        "php": "^8.2",
+        "maispace/mai-base": "@dev",
+        "typo3/cms-core": "^14.1",
+        "typo3/cms-extbase": "^14.1",
+        "typo3/cms-fluid": "^14.1"
+    },
+    "suggest": {
+        "maispace/mai-account": "For authenticated submission restriction",
+        "maispace/mai-mail": "For admin notification emails"
+    },
     "autoload": {
         "psr-4": {
             "Maispace\\MaiSurvey\\": "Classes"
@@ -32,30 +43,20 @@
             "@check:editorconfig",
             "@check:phpcs",
             "@check:phpstan",
-            "@check:typoscript",
-            "@composer validate --strict --no-check-version --no-check-all --no-check-publish"
+            "@check:typoscript"
         ],
         "lint:fix": [
             "@fix:editorconfig",
-            "@fix:phpcs",
-            "@check:phpstan",
-            "@check:typoscript"
+            "@fix:phpcs"
         ],
-        "check:editorconfig": "ec -unv -e vendor/ -e public/",
-        "fix:editorconfig": "ec -unvf -e vendor/ -e public/",
-        "check:phpcs": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer check --config .php-cs-fixer.php --ansi --verbose --diff",
-        "fix:phpcs": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix --config .php-cs-fixer.php --ansi",
-        "check:phpstan": "phpstan analyse --no-progress",
-        "check:phpstan:baseline": "phpstan analyse --no-progress --generate-baseline=phpstan-baseline.neon",
-        "check:typoscript": "typoscript-lint --fail-on-warnings -c typoscript-lint.yml Configuration/",
-        "test": "phpunit --configuration phpunit.xml.dist",
-        "test:unit": "phpunit --configuration phpunit.xml.dist --testsuite Unit"
-    },
-    "config": {
-        "allow-plugins": {
-            "typo3/cms-composer-installers": true,
-            "typo3/class-alias-loader": true
-        },
-        "sort-packages": true
+        "check:editorconfig": "ec",
+        "fix:editorconfig": "ec --fix",
+        "check:phpcs": "php-cs-fixer check --diff",
+        "fix:phpcs": "php-cs-fixer fix",
+        "check:phpstan": "phpstan analyse",
+        "check:phpstan:baseline": "phpstan analyse --generate-baseline",
+        "check:typoscript": "typoscript-lint",
+        "test": "@test:unit",
+        "test:unit": "phpunit -c phpunit.xml.dist"
     }
 }

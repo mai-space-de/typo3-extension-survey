@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="messages" date="2026-04-19T00:00:00Z" product-name="mai_survey">
+        <header/>
+        <body>
+            <trans-unit id="survey.list.title">
+                <source>Surveys</source>
+            </trans-unit>
+            <trans-unit id="survey.show.title">
+                <source>Survey details</source>
+            </trans-unit>
+            <trans-unit id="survey.step.title">
+                <source>Survey step</source>
+            </trans-unit>
+            <trans-unit id="survey.submit.label">
+                <source>Submit survey</source>
+            </trans-unit>
+            <trans-unit id="survey.confirmation.title">
+                <source>Thank you for your submission</source>
+            </trans-unit>
+            <trans-unit id="survey.confirmation.message">
+                <source>Your answers have been recorded successfully.</source>
+            </trans-unit>
+            <trans-unit id="survey.error.duplicate">
+                <source>You have already submitted this survey.</source>
+            </trans-unit>
+            <trans-unit id="survey.error.inactive">
+                <source>This survey is currently inactive.</source>
+            </trans-unit>
+            <trans-unit id="survey.progress.label">
+                <source>Step %1$s of %2$s</source>
+            </trans-unit>
+            <trans-unit id="survey.list.start">
+                <source>Start survey</source>
+            </trans-unit>
+            <trans-unit id="survey.list.empty">
+                <source>No surveys are available right now.</source>
+            </trans-unit>
+            <trans-unit id="survey.step.prev">
+                <source>Previous</source>
+            </trans-unit>
+            <trans-unit id="survey.step.next">
+                <source>Next</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

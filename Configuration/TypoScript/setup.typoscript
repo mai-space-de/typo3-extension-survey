@@ -1,0 +1,24 @@
+plugin.tx_maisurvey_survey {
+    view {
+        templateRootPaths {
+            0 = EXT:mai_survey/Resources/Private/Templates/
+            10 = {$plugin.tx_maisurvey_survey.view.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:mai_survey/Resources/Private/Partials/
+            10 = {$plugin.tx_maisurvey_survey.view.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:mai_survey/Resources/Private/Layouts/
+            10 = {$plugin.tx_maisurvey_survey.view.layoutRootPath}
+        }
+    }
+    persistence {
+        storagePid = {$plugin.tx_maisurvey_survey.persistence.storagePid}
+    }
+    settings {
+        showProgressIndicator = 1
+        allowAnonymous = 1
+        preventDuplicates = 1
+    }
+}

@@ -1,0 +1,24 @@
+<html
+    data-namespace-typo3-fluid="true"
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+<f:layout name="Default" />
+
+<f:section name="main">
+    <article class="mai-survey-show">
+        <h1><f:translate key="survey.show.title" extensionName="mai_survey" /></h1>
+        <h2>{survey.title}</h2>
+        <p>{survey.description}</p>
+
+        <f:if condition="{questions}">
+            <ol>
+                <f:for each="{questions}" as="question">
+                    <li>{question.question}</li>
+                </f:for>
+            </ol>
+        </f:if>
+
+        <f:link.action action="step" arguments="{survey: survey, step: 1}">Start survey</f:link.action>
+    </article>
+</f:section>
+</html>

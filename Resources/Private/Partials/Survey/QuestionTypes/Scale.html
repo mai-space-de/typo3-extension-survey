@@ -1,0 +1,22 @@
+<html
+    data-namespace-typo3-fluid="true"
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+<div class="mai-survey-question__scale">
+    <div class="mai-survey-question__scale-labels">
+        <span>{question.scaleMin}</span>
+        <span>{question.scaleMax}</span>
+    </div>
+    <input
+        type="range"
+        class="mai-survey-question__input mai-survey-question__input--range"
+        name="answers[{question.uid}]"
+        id="q{question.uid}"
+        min="{question.scaleMin}"
+        max="{question.scaleMax}"
+        value="{question.scaleMin}"
+        data-survey-required="{f:if(condition: question.required, then: '1', else: '0')}"
+    />
+    <output class="mai-survey-question__scale-output" for="q{question.uid}">{question.scaleMin}</output>
+</div>
+</html>

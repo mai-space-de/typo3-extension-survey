@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2026-04-19T00:00:00Z" product-name="mai_survey">
+        <header/>
+        <body>
+            <trans-unit id="survey.list.title">
+                <source>Surveys</source>
+                <target>Umfragen</target>
+            </trans-unit>
+            <trans-unit id="survey.show.title">
+                <source>Survey details</source>
+                <target>Umfragedetails</target>
+            </trans-unit>
+            <trans-unit id="survey.step.title">
+                <source>Survey step</source>
+                <target>Umfrageschritt</target>
+            </trans-unit>
+            <trans-unit id="survey.submit.label">
+                <source>Submit survey</source>
+                <target>Umfrage absenden</target>
+            </trans-unit>
+            <trans-unit id="survey.confirmation.title">
+                <source>Thank you for your submission</source>
+                <target>Vielen Dank für Ihre Teilnahme</target>
+            </trans-unit>
+            <trans-unit id="survey.confirmation.message">
+                <source>Your answers have been recorded successfully.</source>
+                <target>Ihre Antworten wurden erfolgreich gespeichert.</target>
+            </trans-unit>
+            <trans-unit id="survey.error.duplicate">
+                <source>You have already submitted this survey.</source>
+                <target>Sie haben diese Umfrage bereits abgesendet.</target>
+            </trans-unit>
+            <trans-unit id="survey.error.inactive">
+                <source>This survey is currently inactive.</source>
+                <target>Diese Umfrage ist derzeit inaktiv.</target>
+            </trans-unit>
+            <trans-unit id="survey.progress.label">
+                <source>Step %1$s of %2$s</source>
+                <target>Schritt %1$s von %2$s</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

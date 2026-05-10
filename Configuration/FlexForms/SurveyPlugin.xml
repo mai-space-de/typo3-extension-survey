@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:mai_survey/Resources/Private/Language/Default/locallang_tca.xlf:flexform.sheet.general</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.surveyUid>
+                        <TCEforms>
+                            <label>LLL:EXT:mai_survey/Resources/Private/Language/Default/locallang_tca.xlf:flexform.field.surveyUid</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <foreign_table>tx_maisurvey_survey</foreign_table>
+                                <foreign_table_where>ORDER BY tx_maisurvey_survey.title</foreign_table_where>
+                                <size>1</size>
+                                <minitems>0</minitems>
+                                <maxitems>1</maxitems>
+                            </config>
+                        </TCEforms>
+                    </settings.surveyUid>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

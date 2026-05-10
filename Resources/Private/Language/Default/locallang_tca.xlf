@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="messages" date="2026-04-19T00:00:00Z" product-name="mai_survey">
+        <header/>
+        <body>
+            <trans-unit id="table.tx_maisurvey_survey">
+                <source>Survey</source>
+            </trans-unit>
+            <trans-unit id="table.tx_maisurvey_question">
+                <source>Question</source>
+            </trans-unit>
+            <trans-unit id="table.tx_maisurvey_submission">
+                <source>Submission</source>
+            </trans-unit>
+            <trans-unit id="table.tx_maisurvey_answer">
+                <source>Answer</source>
+            </trans-unit>
+            <trans-unit id="field.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="field.description">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="field.is_active">
+                <source>Active</source>
+            </trans-unit>
+            <trans-unit id="field.allow_anonymous">
+                <source>Allow anonymous submissions</source>
+            </trans-unit>
+            <trans-unit id="field.prevent_duplicates">
+                <source>Prevent duplicate submissions</source>
+            </trans-unit>
+            <trans-unit id="field.success_message">
+                <source>Success message</source>
+            </trans-unit>
+            <trans-unit id="field.survey">
+                <source>Survey</source>
+            </trans-unit>
+            <trans-unit id="field.question">
+                <source>Question</source>
+            </trans-unit>
+            <trans-unit id="field.type">
+                <source>Question type</source>
+            </trans-unit>
+            <trans-unit id="field.required">
+                <source>Required</source>
+            </trans-unit>
+            <trans-unit id="field.options">
+                <source>Options (JSON)</source>
+            </trans-unit>
+            <trans-unit id="field.scale_min">
+                <source>Scale minimum</source>
+            </trans-unit>
+            <trans-unit id="field.scale_max">
+                <source>Scale maximum</source>
+            </trans-unit>
+            <trans-unit id="field.session_hash">
+                <source>Session hash</source>
+            </trans-unit>
+            <trans-unit id="field.fe_user_uid">
+                <source>Frontend user UID</source>
+            </trans-unit>
+            <trans-unit id="field.submitted_at">
+                <source>Submitted at</source>
+            </trans-unit>
+            <trans-unit id="field.submission">
+                <source>Submission</source>
+            </trans-unit>
+            <trans-unit id="field.value">
+                <source>Value</source>
+            </trans-unit>
+            <trans-unit id="question_type.single">
+                <source>Single choice</source>
+            </trans-unit>
+            <trans-unit id="question_type.multi">
+                <source>Multiple choice</source>
+            </trans-unit>
+            <trans-unit id="question_type.text">
+                <source>Text input</source>
+            </trans-unit>
+            <trans-unit id="question_type.scale">
+                <source>Scale</source>
+            </trans-unit>
+            <trans-unit id="question_type.date">
+                <source>Date</source>
+            </trans-unit>
+            <trans-unit id="tab.language">
+                <source>Language</source>
+            </trans-unit>
+            <trans-unit id="tab.access">
+                <source>Access</source>
+            </trans-unit>
+            <trans-unit id="ctype.survey">
+                <source>Survey</source>
+            </trans-unit>
+            <trans-unit id="plugin.survey.title">
+                <source>Survey: Wizard</source>
+            </trans-unit>
+            <trans-unit id="flexform.sheet.general">
+                <source>General</source>
+            </trans-unit>
+            <trans-unit id="flexform.field.surveyUid">
+                <source>Survey</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

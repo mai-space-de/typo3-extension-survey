@@ -1,0 +1,13 @@
+<html
+    data-namespace-typo3-fluid="true"
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+<div class="mai-survey-progress">
+    <p data-survey-progress-text="1">
+        <f:translate key="survey.progress.label" extensionName="mai_survey" arguments="{0: currentStep, 1: totalSteps}" />
+    </p>
+    <div class="mai-survey-progress__track">
+        <span class="mai-survey-progress__bar" data-survey-progress-bar="1" style="width: {progressPercentage}%"></span>
+    </div>
+</div>
+</html>

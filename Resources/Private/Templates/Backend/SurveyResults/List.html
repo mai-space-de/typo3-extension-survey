@@ -1,0 +1,45 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+<be:pageRenderer />
+
+<be:moduleLayout>
+    <f:render section="Content" />
+</be:moduleLayout>
+
+<f:section name="Content">
+    <div class="module-body">
+        <h1>Survey results</h1>
+
+        <f:if condition="{surveys}">
+            <f:then>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Survey</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <f:for each="{surveys}" as="survey">
+                            <tr>
+                                <td>{survey.title}</td>
+                                <td>
+                                    <f:link.action action="show" arguments="{survey: survey}">View</f:link.action>
+                                    |
+                                    <f:link.action action="export" arguments="{survey: survey}">CSV</f:link.action>
+                                </td>
+                            </tr>
+                        </f:for>
+                    </tbody>
+                </table>
+            </f:then>
+            <f:else>
+                <p>No survey records found.</p>
+            </f:else>
+        </f:if>
+    </div>
+</f:section>
+</html>

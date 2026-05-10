@@ -1,0 +1,10 @@
+plugin.tx_maisurvey_survey {
+    view {
+        templateRootPath =
+        partialRootPath =
+        layoutRootPath =
+    }
+    persistence {
+        storagePid =
+    }
+}
