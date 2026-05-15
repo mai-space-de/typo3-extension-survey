@@ -17,7 +17,7 @@ return (new Table($lang('table.tx_maisurvey_question')))
     ->setSearchFields('question,type,options')
     ->setDefaultConfig()
     ->setLabel('question')
-    ->setIconFile('EXT:mai_survey/Resources/Public/Icons/Extension.svg')
+    ->setIconFile('EXT:mai_base/Resources/Public/Icons/generic_table.svg')
     ->setSortingField()
     ->addColumn(
         'survey',

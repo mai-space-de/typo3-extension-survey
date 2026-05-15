@@ -14,11 +14,11 @@ ExtensionUtility::registerPlugin(
     'MaiSurvey',
     'Survey',
     $lang('plugin.survey.title'),
-    'ext-maispace-mai_survey',
+    'mai-content',
     'maispace_feature'
 );
 
-(new CType('maispace_survey_survey', $lang('ctype.survey'), 'ext-maispace-mai_survey'))
+(new CType('maispace_survey_survey', $lang('ctype.survey'), 'mai-content'))
     ->addDefaultHeaderPalette()
     ->addCustomFields('pi_flexform')
     ->addDefaultLanguageTab()

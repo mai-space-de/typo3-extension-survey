@@ -32,6 +32,11 @@ class SurveyResultsController extends AbstractBackendController
         parent::__construct($moduleTemplateFactory, $iconFactory);
     }
 
+    public function indexAction(): ResponseInterface
+    {
+        return $this->listAction();
+    }
+
     public function listAction(): ResponseInterface
     {
         $moduleTemplate = $this->createModuleTemplate();

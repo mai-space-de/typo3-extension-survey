@@ -8,7 +8,7 @@ return [
     'maispace_survey_results' => [
         'parent' => 'web',
         'access' => 'user',
-        'iconIdentifier' => 'ext-maispace-mai_survey',
+        'iconIdentifier' => 'mai-backend-module',
         'labels' => 'LLL:EXT:mai_survey/Resources/Private/Language/Default/locallang_module.xlf',
         'extensionName' => 'MaiSurvey',
         'controllerActions' => [
