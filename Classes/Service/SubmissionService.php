@@ -20,8 +20,7 @@ class SubmissionService
         private readonly SubmissionRepository $submissionRepository,
         private readonly PersistenceManager $persistenceManager,
         private readonly Context $context,
-    ) {
-    }
+    ) {}
 
     public function generateSessionHash(Survey $survey, ServerRequestInterface $request): string
     {

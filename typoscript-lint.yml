@@ -1,9 +1,15 @@
+paths:
+  - Configuration/
+
+filePatterns:
+  - "*.typoscript"
+
 sniffs:
-    - class: Indentation
-      parameters:
-          indentPerLevel: 4
-          indentCharacter: space
-    - class: DeadCode
-    - class: EmptyBlock
-    - class: NestingConsistency
-    - class: RepeatingRValue
+  - class: Indentation
+    parameters:
+      useSpaces: true
+      indentPerLevel: 4
+  - class: DeadCode
+  - class: EmptySection
+  - class: NestingConsistency
+  - class: RepeatingRValue

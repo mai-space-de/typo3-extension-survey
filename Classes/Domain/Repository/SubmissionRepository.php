@@ -17,8 +17,8 @@ class SubmissionRepository extends Repository
         $query->matching(
             $query->logicalAnd(
                 $query->equals('survey', $survey),
-                $query->equals('sessionHash', $hash)
-            )
+                $query->equals('sessionHash', $hash),
+            ),
         );
         $query->setLimit(1);
 

@@ -10,7 +10,6 @@ use Maispace\MaiBase\Controller\Traits\FlashMessageTrait;
 use Maispace\MaiBase\Controller\Traits\PageRendererTrait;
 use Maispace\MaiSurvey\Domain\Model\Question;
 use Maispace\MaiSurvey\Domain\Model\Survey;
-use Maispace\MaiSurvey\Domain\Repository\QuestionRepository;
 use Maispace\MaiSurvey\Domain\Repository\SurveyRepository;
 use Maispace\MaiSurvey\Service\SubmissionService;
 use Psr\Http\Message\ResponseInterface;
@@ -25,10 +24,8 @@ class SurveyController extends AbstractActionController
 
     public function __construct(
         private readonly SurveyRepository $surveyRepository,
-        private readonly QuestionRepository $questionRepository,
         private readonly SubmissionService $submissionService,
-    ) {
-    }
+    ) {}
 
     public function injectPageRenderer(PageRenderer $pageRenderer): void
     {
