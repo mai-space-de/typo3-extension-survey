@@ -35,4 +35,23 @@ class SubmissionRepository extends Repository
 
         return $query->execute();
     }
+
+    /**
+     * Fetches a page of submissions for a survey using LIMIT/OFFSET so callers
+     * can iterate in chunks without loading the entire result set into memory.
+     *
+     * @return Submission[]
+     */
+    public function findBySurveyChunked(Survey $survey, int $limit, int $offset): array
+    {
+        $query = $this->createQuery();
+        $query->matching($query->equals('survey', $survey));
+        $query->setLimit($limit);
+        $query->setOffset($offset);
+
+        /** @var Submission[] $result */
+        $result = $query->execute()->toArray();
+
+        return $result;
+    }
 }

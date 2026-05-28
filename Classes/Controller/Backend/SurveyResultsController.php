@@ -66,34 +66,42 @@ class SurveyResultsController extends AbstractBackendController
 
     public function exportAction(Survey $survey): ResponseInterface
     {
+        $chunkSize = 250;
+        $offset = 0;
         $rows = [['submission_uid', 'submitted_at', 'fe_user_uid', 'session_hash', 'question', 'value']];
 
-        foreach ($this->submissionRepository->findBySurvey($survey) as $submission) {
-            $answers = $submission->getAnswers();
-            if (count($answers) === 0) {
-                $rows[] = [
-                    (string) $submission->getUid(),
-                    $submission->getSubmittedAt()?->format('Y-m-d H:i:s') ?? '',
-                    (string) $submission->getFeUserUid(),
-                    $submission->getSessionHash(),
-                    '',
-                    '',
-                ];
+        do {
+            $chunk = $this->submissionRepository->findBySurveyChunked($survey, $chunkSize, $offset);
 
-                continue;
+            foreach ($chunk as $submission) {
+                $answers = $submission->getAnswers();
+                if (count($answers) === 0) {
+                    $rows[] = [
+                        (string) $submission->getUid(),
+                        $submission->getSubmittedAt()?->format('Y-m-d H:i:s') ?? '',
+                        (string) $submission->getFeUserUid(),
+                        $submission->getSessionHash(),
+                        '',
+                        '',
+                    ];
+
+                    continue;
+                }
+
+                foreach ($answers as $answer) {
+                    $rows[] = [
+                        (string) $submission->getUid(),
+                        $submission->getSubmittedAt()?->format('Y-m-d H:i:s') ?? '',
+                        (string) $submission->getFeUserUid(),
+                        $submission->getSessionHash(),
+                        $answer->getQuestion()?->getQuestion() ?? '',
+                        $answer->getValue(),
+                    ];
+                }
             }
 
-            foreach ($answers as $answer) {
-                $rows[] = [
-                    (string) $submission->getUid(),
-                    $submission->getSubmittedAt()?->format('Y-m-d H:i:s') ?? '',
-                    (string) $submission->getFeUserUid(),
-                    $submission->getSessionHash(),
-                    $answer->getQuestion()?->getQuestion() ?? '',
-                    $answer->getValue(),
-                ];
-            }
-        }
+            $offset += $chunkSize;
+        } while (count($chunk) === $chunkSize);
 
         return $this->csvDownloadResponse($rows, sprintf('survey-%d-results.csv', $survey->getUid()));
     }
