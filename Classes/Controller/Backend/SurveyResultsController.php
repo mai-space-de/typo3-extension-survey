@@ -41,7 +41,7 @@ class SurveyResultsController extends AbstractBackendController
     {
         $moduleTemplate = $this->createModuleTemplate();
         $allSurveys = $this->surveyRepository->findAll();
-        [$pagination, $paginator] = $this->paginateQueryResult($allSurveys);
+        ['paginator' => $paginator, 'pagination' => $pagination] = $this->paginateQueryResult($allSurveys);
         $this->assignMultiple($moduleTemplate, [
             'surveys' => $paginator->getPaginatedItems(),
             'pagination' => $pagination,
@@ -54,7 +54,7 @@ class SurveyResultsController extends AbstractBackendController
     {
         $moduleTemplate = $this->createModuleTemplate();
         $allSubmissions = $this->submissionRepository->findBySurvey($survey);
-        [$pagination, $paginator] = $this->paginateQueryResult($allSubmissions);
+        ['paginator' => $paginator, 'pagination' => $pagination] = $this->paginateQueryResult($allSubmissions);
         $this->assignMultiple($moduleTemplate, [
             'survey' => $survey,
             'submissions' => $paginator->getPaginatedItems(),
