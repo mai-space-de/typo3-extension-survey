@@ -18,6 +18,17 @@
         </f:if>
 
         <f:flashMessages />
+        <f:form.validationResults>
+            <f:if condition="{validationResults.flattenedErrors}">
+                <div class="mai-survey-step__errors" role="alert">
+                    <f:for each="{validationResults.flattenedErrors}" as="errors" key="propertyName">
+                        <f:for each="{errors}" as="error">
+                            <p class="mai-survey-step__error">{error.message}</p>
+                        </f:for>
+                    </f:for>
+                </div>
+            </f:if>
+        </f:form.validationResults>
 
         <f:form action="submit" arguments="{survey: survey}" method="post">
             <f:for each="{questions}" as="question" iteration="iterator">
@@ -31,6 +42,7 @@
                     type="button"
                     class="mai-button mai-button--secondary"
                     data-survey-prev="1"
+                    aria-label="{f:translate(key: 'survey.step.prev', extensionName: 'mai_survey')}"
                 >
                     <f:translate key="survey.step.prev" extensionName="mai_survey" />
                 </button>
@@ -38,6 +50,7 @@
                     type="button"
                     class="mai-button mai-button--secondary"
                     data-survey-next="1"
+                    aria-label="{f:translate(key: 'survey.step.next', extensionName: 'mai_survey')}"
                 >
                     <f:translate key="survey.step.next" extensionName="mai_survey" />
                 </button>
@@ -45,6 +58,7 @@
                     type="submit"
                     class="mai-button mai-button--primary"
                     data-survey-submit="1"
+                    aria-label="{f:translate(key: 'survey.submit.label', extensionName: 'mai_survey')}"
                 >
                     <f:translate key="survey.submit.label" extensionName="mai_survey" />
                 </button>
