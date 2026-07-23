@@ -39,6 +39,22 @@
                 <source>Step %1$s of %2$s</source>
                 <target>Schritt %1$s von %2$s</target>
             </trans-unit>
+            <trans-unit id="survey.list.start">
+                <source>Start survey</source>
+                <target>Umfrage starten</target>
+            </trans-unit>
+            <trans-unit id="survey.list.empty">
+                <source>No surveys are available right now.</source>
+                <target>Derzeit sind keine Umfragen verfügbar.</target>
+            </trans-unit>
+            <trans-unit id="survey.step.prev">
+                <source>Previous</source>
+                <target>Zurück</target>
+            </trans-unit>
+            <trans-unit id="survey.step.next">
+                <source>Next</source>
+                <target>Weiter</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
