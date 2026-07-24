@@ -3,24 +3,20 @@
     <sheets>
         <sDEF>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:mai_survey/Resources/Private/Language/Default/locallang_tca.xlf:flexform.sheet.general</sheetTitle>
-                </TCEforms>
+                <sheetTitle>LLL:EXT:mai_survey/Resources/Private/Language/Default/locallang_tca.xlf:flexform.sheet.general</sheetTitle>
                 <type>array</type>
                 <el>
                     <settings.surveyUid>
-                        <TCEforms>
-                            <label>LLL:EXT:mai_survey/Resources/Private/Language/Default/locallang_tca.xlf:flexform.field.surveyUid</label>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingle</renderType>
-                                <foreign_table>tx_maisurvey_survey</foreign_table>
-                                <foreign_table_where>ORDER BY tx_maisurvey_survey.title</foreign_table_where>
-                                <size>1</size>
-                                <minitems>0</minitems>
-                                <maxitems>1</maxitems>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:mai_survey/Resources/Private/Language/Default/locallang_tca.xlf:flexform.field.surveyUid</label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <foreign_table>tx_maisurvey_survey</foreign_table>
+                            <foreign_table_where>ORDER BY tx_maisurvey_survey.title</foreign_table_where>
+                            <size>1</size>
+                            <minitems>0</minitems>
+                            <maxitems>1</maxitems>
+                        </config>
                     </settings.surveyUid>
                 </el>
             </ROOT>
