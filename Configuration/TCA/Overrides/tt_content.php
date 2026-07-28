@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 defined('TYPO3') or die();
 
-use Maispace\MaiBase\TableConfigurationArray\CType;
 use Maispace\MaiBase\TableConfigurationArray\Helper;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
@@ -15,19 +14,7 @@ ExtensionUtility::registerPlugin(
     'Survey',
     $lang('plugin.survey.title'),
     'mai-content',
-    'maispace_feature'
-);
-
-(new CType('maispace_survey_survey', $lang('ctype.survey'), 'mai-content'))
-    ->addDefaultHeaderPalette()
-    ->addCustomFields('pi_flexform')
-    ->addDefaultLanguageTab()
-    ->addDefaultAccessTab()
-    ->setGroup('maispace_feature')
-    ->register();
-
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
-    '*',
+    'maispace_plugins_interactive',
+    '',
     'FILE:EXT:mai_survey/Configuration/FlexForms/SurveyPlugin.xml',
-    'maispace_survey_survey'
 );

@@ -80,7 +80,7 @@ A single Extbase plugin is registered:
 
 | Identifier | CType | Controller | Cached actions | Uncached actions |
 |---|---|---|---|---|
-| `maispace_survey_survey` | `maispace_survey_survey` | `SurveyController` | `list`, `show`, `confirmation` | `step`, `submit` |
+| `maisurvey_survey` | `maisurvey_survey` | `SurveyController` | `list`, `show`, `confirmation` | `step`, `submit` |
 
 The plugin belongs to the `maispace_feature` group in the CType selector.
 A FlexForm (`SurveyPlugin.xml`) is attached to the CType and exposes one editor setting: `settings.surveyUid`.
