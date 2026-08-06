@@ -15,6 +15,7 @@ use Maispace\MaiSurvey\Service\SubmissionService;
 use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Core\Page\AssetCollector;
 use TYPO3\CMS\Core\Page\PageRenderer;
+use TYPO3\CMS\Extbase\Attribute\RateLimit;
 
 class SurveyController extends AbstractActionController
 {
@@ -85,6 +86,7 @@ class SurveyController extends AbstractActionController
         return $this->htmlResponse();
     }
 
+    #[RateLimit(limit: 5, interval: '15 minutes')]
     public function submitAction(Survey $survey): ResponseInterface
     {
         if (!$survey->isActive()) {
