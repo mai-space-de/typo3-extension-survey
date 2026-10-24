@@ -13,7 +13,7 @@ return (new Table($lang('table.tx_maisurvey_answer')))
     ->setSearchFields('value')
     ->setDefaultConfig()
     ->setLabel('value')
-    ->setIconFile('EXT:mai_base/Resources/Public/Icons/generic_table.svg')
+    ->setIconFile('EXT:mai_base/Resources/Public/Icons/all-icons/Interface-file-text--text-common-file--Streamline-Core.svg')
     ->setSortingField()
     ->disableRecordModule()
     ->addColumn(

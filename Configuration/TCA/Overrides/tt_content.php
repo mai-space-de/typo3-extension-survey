@@ -13,7 +13,7 @@ ExtensionUtility::registerPlugin(
     'MaiSurvey',
     'Survey',
     $lang('plugin.survey.title'),
-    'mai-content',
+    'mai-survey',
     'maispace_plugins_interactive',
     '',
     'FILE:EXT:mai_survey/Configuration/FlexForms/SurveyPlugin.xml',

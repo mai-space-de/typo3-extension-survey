@@ -15,7 +15,7 @@ return (new Table($lang('table.tx_maisurvey_submission')))
     ->setSearchFields('session_hash,fe_user_uid')
     ->setDefaultConfig()
     ->setLabel('session_hash')
-    ->setIconFile('EXT:mai_base/Resources/Public/Icons/generic_table.svg')
+    ->setIconFile('EXT:mai_base/Resources/Public/Icons/all-icons/interface-file-clipboard-check--checkmark-edit-task-edition-checklist-check-success-clipboard-form--Streamline-Core.svg')
     ->setDefaultSorting('ORDER BY submitted_at DESC')
     ->addColumn(
         'survey',
