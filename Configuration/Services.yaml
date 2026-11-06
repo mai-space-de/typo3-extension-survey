@@ -7,3 +7,21 @@ services:
   Maispace\MaiSurvey\:
     resource: '../Classes/*'
     exclude: '../Classes/Domain/Model/*'
+
+  dashboard.widget.maiSurveyManual:
+    class: 'ProudNerds\PnBackendManual\Widgets\ManualWidget'
+    arguments:
+      $options:
+        file: 'EXT:mai_survey/Resources/Private/Manual/Manual.md'
+        numbered: true
+        contentsDepth: 2
+        printButton: true
+    tags:
+      - name: dashboard.widget
+        identifier: 'maiSurveyManual'
+        groupNames: 'documentation'
+        title: 'Handbuch: Umfragen'
+        description: 'Kurze Anleitung für Umfragen, Fragen und Auswertungen.'
+        iconIdentifier: 'content-book'
+        height: 'medium'
+        width: 'medium'
